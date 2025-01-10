@@ -2,8 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
-
-
 const Navbar = () => {
     const { user } = useKindeBrowserClient();
 
@@ -13,7 +11,12 @@ const Navbar = () => {
                 <h1 className=' text-3xl font-bold'>shedulr</h1>
             </div>
             {user && <div className='flex items-center gap-3 text-lg'>
-                <p>Socials</p>
+                <div className=' flex gap-10 items-center'>
+                    <div className="w-10 relative">
+  
+                    </div>
+                    
+                    Socials</div>
                 <p >{user.given_name}</p>
                 <Image className="h-10 w-10 rounded-full overflow-hidden" src={user?.picture as string} alt='profile' height={100} width={100} />
             </div>}

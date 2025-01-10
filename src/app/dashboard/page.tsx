@@ -1,11 +1,11 @@
 "use client";
-import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs'
+import Navbar from '@/Components/Navbar';
 import React from 'react'
 
 const Page = () => {
     return (
         <div>
-            <LogoutLink className='text-lg font-light underline text-zinc-400'>Logout</LogoutLink>
+            <Navbar/>
         </div>
     )
 }
